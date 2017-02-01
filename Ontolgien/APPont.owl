@@ -1,0 +1,2147 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.appsist.de/ontology/"
+     xml:base="http://www.appsist.de/ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.appsist.de/ontology/">
+        <rdfs:label xml:lang="de">APPsist Ontologie</rdfs:label>
+        <rdfs:label xml:lang="en">APPsist Ontology</rdfs:label>
+        <owl:versionInfo xml:lang="de">1.6</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&skos;note"/>
+    <owl:AnnotationProperty rdf:about="&terms;description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <rdfs:Datatype rdf:about="&xsd;duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.appsist.de/ontology/bedingt -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/bedingt">
+        <rdfs:label xml:lang="de">bedingt oder erfordert</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Maschinenzustand"/>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Massnahme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/bringtHervor -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/bringtHervor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="de">bringt hervor</rdfs:label>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Erzeugnisse"/>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Produktionsschritt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/fuehrtDurch -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/fuehrtDurch">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="de">führt durch</rdfs:label>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Produktionsschritt"/>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/hasPart">
+        <rdfs:label xml:lang="de">hat Teil</rdfs:label>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hatAktion -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/hatAktion">
+        <rdfs:label xml:lang="de">hat Aktion</rdfs:label>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Aktion"/>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hatAktivitaet -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/hatAktivitaet">
+        <rdfs:label xml:lang="de">hat Aktivität</rdfs:label>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Massnahme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hatAufgabe -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/hatAufgabe">
+        <rdfs:label xml:lang="de">hat Aufgabe</rdfs:label>
+        <rdfs:label xml:lang="en">has task</rdfs:label>
+        <terms:description xml:lang="de">Die Aufgaben die auf einer Stelle durchzuführen sind.</terms:description>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Aufgabe"/>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Stelle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hatMassnahme -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/hatMassnahme">
+        <rdfs:label xml:lang="de">hat Maßnahme</rdfs:label>
+        <terms:description xml:lang="de">Die Maßnahmen die zur Realisierung von Aufgaben dienen.</terms:description>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Aufgabe"/>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Massnahme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hatSchritt -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/hatSchritt">
+        <rdfs:label xml:lang="de">hat Schritt</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Aktion"/>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hatStelle -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/hatStelle">
+        <rdfs:label xml:lang="de">hat Stelle</rdfs:label>
+        <rdfs:label xml:lang="en">has position</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hatZielgruppe -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/hatZielgruppe">
+        <rdfs:label xml:lang="de">hat Zielgruppe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hatZustand -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/hatZustand">
+        <rdfs:label xml:lang="de">hat Maschinenzustand</rdfs:label>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Maschinenzustand"/>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/informiertUeber -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/informiertUeber">
+        <rdfs:label xml:lang="de">informiert über</rdfs:label>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Domaenenkonzept"/>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Inhalt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/isPartOf">
+        <rdfs:label xml:lang="de">ist Teil von</rdfs:label>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/maschinenZustandBeziehtSichAuf -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/maschinenZustandBeziehtSichAuf">
+        <rdfs:label xml:lang="de">Maschinenzustand bezieht sich auf</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Maschinenzustand"/>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Produktionsgegenstand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/realisiertProzess -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/realisiertProzess">
+        <rdfs:label xml:lang="de">realisiert Prozess</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Anlage"/>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Produktionsprozess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/verwendet -->
+
+    <owl:ObjectProperty rdf:about="http://www.appsist.de/ontology/verwendet">
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Domaenenkonzept"/>
+        <rdfs:range rdf:resource="http://www.appsist.de/ontology/Produktionsgegenstand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.appsist.de/ontology/format -->
+
+    <owl:DatatypeProperty rdf:about="http://www.appsist.de/ontology/format">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="de">ist vom Format</rdfs:label>
+        <rdfs:label xml:lang="en">has format</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.appsist.de/ontology/Inhalt"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hasPreview -->
+
+    <owl:DatatypeProperty rdf:about="http://www.appsist.de/ontology/hasPreview">
+        <rdfs:label xml:lang="de">hat Vorschaubild</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.appsist.de/ontology/hatPrioritaet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.appsist.de/ontology/hatPrioritaet">
+        <rdfs:label xml:lang="de">hat Priorität</rdfs:label>
+        <rdfs:label xml:lang="en">has priority</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.appsist.de/ontology/Abteilung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Abteilung">
+        <rdfs:label xml:lang="de">Abteilung</rdfs:label>
+        <rdfs:label xml:lang="en">department</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Organisationseinheit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Abteilungsbereich -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Abteilungsbereich">
+        <rdfs:label xml:lang="de">Abteilungsbereich</rdfs:label>
+        <rdfs:label xml:lang="en">department unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Organisationseinheit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Aktion -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Aktion">
+        <rdfs:label xml:lang="de">Aktion</rdfs:label>
+        <rdfs:label xml:lang="en">action</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Prozesselement"/>
+        <terms:description xml:lang="de">Eine auf eine Maschine bezogene Handlung einer Aktivität. Kann aus Schritten zusammengesetzt sein.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Aktivitaet -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Aktivitaet">
+        <rdfs:label xml:lang="de">Aktivität</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Prozesselement"/>
+        <terms:description xml:lang="de">Eine Aktivität beschreibt allgemeine, nicht auf konkrete Maschine oder Werkstoffe bezogene Handlungsabläufe, die aus einer Folge von Schritten (Aktionen oder aus Aktivitäten) bestehen.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Anlage -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Anlage">
+        <rdfs:label xml:lang="de">Anlage</rdfs:label>
+        <rdfs:label xml:lang="en">installation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Produktionsmittel"/>
+        <terms:description xml:lang="de">Stationär betriebenes Arbeitsmittel, das einen kompletten Produktionsprozess realisiert.</terms:description>
+        <terms:description xml:lang="en">Stationary device that implements a complete production process.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/AnlagenBetreuung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/AnlagenBetreuung">
+        <rdfs:label xml:lang="de">Anlagenbetreuung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Inbetriebnahme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Anlagenbediener -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Anlagenbediener">
+        <rdfs:label xml:lang="de">Anlagenbediener</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Ausfuehrende"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/AnlagenbedingteStoerung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/AnlagenbedingteStoerung">
+        <rdfs:label xml:lang="de">Anlagenbedingte Störung</rdfs:label>
+        <rdfs:label xml:lang="en">internal disabled state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Stoerung"/>
+        <terms:description xml:lang="de">Zustand  einer  Einheit, gekennzeichnet durch eine Unfähigkeit, eine geforderte Funktion auszuführen.</terms:description>
+        <terms:description xml:lang="en">State of a machine characterized either by an  inability  to  perform  a  required function.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Anlagenfuehrer -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Anlagenfuehrer">
+        <rdfs:label xml:lang="de">Anlagenführer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Ausfuehrende"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Anlagenoperator -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Anlagenoperator">
+        <rdfs:label xml:lang="de">Anlagenoperator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Ausfuehrende"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Anlagenoptimierung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Anlagenoptimierung">
+        <rdfs:label xml:lang="de">Anlagenoptimierung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Inbetriebnahme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Arbeitsplatzgruppe -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Arbeitsplatzgruppe">
+        <rdfs:label xml:lang="de">Arbeitsplatzgruppe</rdfs:label>
+        <rdfs:label xml:lang="en">workplace unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Organisationseinheit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Aufgabe -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Aufgabe">
+        <rdfs:label xml:lang="de">Aufgabe</rdfs:label>
+        <rdfs:label xml:lang="en">task</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Funktion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Ausfuehrende -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Ausfuehrende">
+        <rdfs:label xml:lang="de">Ausführende</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Stelle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Baugruppe -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Baugruppe">
+        <rdfs:label xml:lang="de">Baugruppe</rdfs:label>
+        <rdfs:label xml:lang="en">subassembly</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Erzeugnisse"/>
+        <terms:description xml:lang="de">Bezeichnung für eine Gruppe von Einzelteilen, die als Einheit in das Endprodukt eingeht. Viele Industrieprodukte bestehen aus mehreren Einzelteilen, die durch Montagearbeitsgänge zu Baugruppen und schließlich zu Endprodukten zusammengefügt werden (Gabler Wirtschaftslexikon).</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Bearbeitung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Bearbeitung">
+        <rdfs:label xml:lang="de">Bearbeitung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Aufgabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Bedienung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Bedienung">
+        <rdfs:label xml:lang="de">Bedienung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Aufgabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Beispiel -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Beispiel">
+        <rdfs:label xml:lang="de">Beispiel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Erlaeuterung"/>
+        <terms:description xml:lang="de">Einzelfall, der zufällig aus einer Menge genommen wurde, der als Erklärung oder Nachweis dient.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Beschaeftigter -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Beschaeftigter">
+        <rdfs:label xml:lang="de">Beschäftigter</rdfs:label>
+        <rdfs:label xml:lang="en">employee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Organisationseinheit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Betriebsmittel -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Betriebsmittel">
+        <rdfs:label xml:lang="de">Betriebsmittel</rdfs:label>
+        <rdfs:label xml:lang="en">equipment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Produktionsgegenstand"/>
+        <skos:note xml:lang="de">Quelle: Skript der Vorlesung &quot;Grundlagen der Betriebswirtschaftslehre&quot; von Prof. Hentze.</skos:note>
+        <terms:description xml:lang="de">Zu den Betriebsmitteln gehört die gesamte technische Apparatur, deren sich der Betrieb zur Durchführung des Betriebsprozesses bedient, wie Maschinen, maschinelle Anlagen und Werkzeuge aber auch Grundstücke, Gebäude, Verkehrmittel, Transport- und Büroeinrichtungen. Sie werden im Gegensatz zu den Werkstoffen nicht verbraucht.</terms:description>
+        <terms:description xml:lang="en">Equipment includes the entire technical apparatus used during production as well as property (plot of land), buildings, etc. In contrast to materials, equipment is not consumed.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Betriebsstoff -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Betriebsstoff">
+        <rdfs:label xml:lang="de">Betriebsstoff</rdfs:label>
+        <rdfs:label xml:lang="en">consumable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Werkstoff"/>
+        <skos:note xml:lang="de">Quelle: Skript der Vorlesung &quot;Grundlagen der Betriebswirtschaftslehre&quot; von Prof. Hentze.</skos:note>
+        <terms:description xml:lang="de">Stoffe, die nicht unmittelbar in das Fertigungsprodukt eingehen, sondern im Fertigungsprozess verbraucht werden, bzw. diesen ermöglichen (z.B.: Energie Schmiermittel, Reinigungsmaterial, Büromaterial).</terms:description>
+        <terms:description xml:lang="en">Indirect materials not incorporated into the final product, but consumed during the production process or enabling it (e.g., lubricant, oils, etc consumed in a typical manufacturing facility).</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Betriebszustand -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Betriebszustand">
+        <rdfs:label xml:lang="de">Betriebszustand</rdfs:label>
+        <rdfs:label xml:lang="en">operating state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/FunktionsfaehigerZustand"/>
+        <terms:description xml:lang="de">Zustand,  in  dem  eine  Einheit  die  geforderte Funktion erbringt.</terms:description>
+        <terms:description xml:lang="en">State when an item is performing as required.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Definition -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Definition">
+        <rdfs:label xml:lang="de">Definition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Konzept"/>
+        <terms:description xml:lang="de">Text, der die Bedeutung eines Konzeptes eindeutig festlegt.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/DirekteFertigungsunterstützung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/DirekteFertigungsunterstützung">
+        <rdfs:label xml:lang="de">Direkte Fertigungsunterstützung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Aufgabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Domaenenkonzept -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Domaenenkonzept">
+        <rdfs:label xml:lang="de">Domänenkonzept</rdfs:label>
+        <rdfs:label xml:lang="en">domain concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Domaenenprozess -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Domaenenprozess">
+        <rdfs:label xml:lang="de">Domänenprozess</rdfs:label>
+        <rdfs:label xml:lang="en">domain process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Process"/>
+        <terms:description xml:lang="de">Ein Prozess, der eine Folge von Abläufen in der Domäne beschreibt.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Domaenenzustand -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Domaenenzustand">
+        <rdfs:label xml:lang="de">Domänenzustand</rdfs:label>
+        <rdfs:label xml:lang="en">state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenkonzept"/>
+        <terms:description xml:lang="de">Domänenbezogene Information, die Zustände verschiedener Domänenkonzepte beschreibt.</terms:description>
+        <terms:description xml:lang="en">State of a domain concept.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/EinfacheStoerungenBeheben -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/EinfacheStoerungenBeheben">
+        <rdfs:label xml:lang="de">Einfache Störungen beheben</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Bedienung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/EinfacheWartungsaufgaben -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/EinfacheWartungsaufgaben">
+        <rdfs:label xml:lang="de">Einfache Wartungsaufgaben</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Bedienung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/ElementarerSchritt -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/ElementarerSchritt">
+        <rdfs:label xml:lang="de">Elementarer Schritt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Prozesselement"/>
+        <terms:description xml:lang="de">Eine elementare, konkrete Handlung an einer Maschine.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Erlaeuterung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Erlaeuterung">
+        <rdfs:label xml:lang="de">Erläuterung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Inhalt"/>
+        <terms:description xml:lang="de">Inhalt, der weiterführende Informationen zu einem Konzept enthält.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Erzeugnisse -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Erzeugnisse">
+        <rdfs:label xml:lang="de">Erzeugnis</rdfs:label>
+        <rdfs:label xml:lang="en">produced artifcat</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Produktionsgegenstand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/ExterneStoerung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/ExterneStoerung">
+        <rdfs:label xml:lang="de">Externe Störung</rdfs:label>
+        <rdfs:label xml:lang="en">external disabled state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Stoerung"/>
+        <terms:description xml:lang="de">Teilbereich der Störung einer in funktionsfähigem Zustand befindlichen Einheit, ein Zustand, der aufgrund eines Mangels an erforderlichen externen Hilfsmitteln auftritt.</terms:description>
+        <terms:description xml:lang="en">Subset of the disabled state when the item is in an up state, but lacks required external resources or is disabled due to planned actions other than maintenance.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Fakt -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Fakt">
+        <rdfs:label xml:lang="de">Fakt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Konzept"/>
+        <terms:description xml:lang="de">Text der einen tatsächlich bestehenden Umstand oder eine unumstößliche Tatsache beschreibt.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Fehlerbehebung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Fehlerbehebung">
+        <rdfs:label xml:lang="de">Fehlerbehebung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Inbetriebnahme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Foerdermittel -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Foerdermittel">
+        <rdfs:label xml:lang="de">Förder- und Transportmittel</rdfs:label>
+        <rdfs:label xml:lang="en">means of transportation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Hilfsmittel"/>
+        <terms:description xml:lang="en">A mechanical device that transports equipment, such as conveyor belts and vehicles.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Funktion -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Funktion">
+        <rdfs:label xml:lang="de">Funktion</rdfs:label>
+        <rdfs:label xml:lang="en">function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenkonzept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/FunktionsfaehigerZustand -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/FunktionsfaehigerZustand">
+        <rdfs:label xml:lang="de">Funktionsfaehiger Zustand</rdfs:label>
+        <rdfs:label xml:lang="en">up state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Maschinenzustand"/>
+        <terms:description xml:lang="de">Zustand einer Maschine, der dadurch gekennzeichnet ist, dass sie eine geforderte Funktion erfüllen kann.</terms:description>
+        <terms:description xml:lang="en">State of a machine characterized by the fact that it can perform a required function.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Gebaeude -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Gebaeude">
+        <rdfs:label xml:lang="de">Gebäude</rdfs:label>
+        <rdfs:label xml:lang="en">building</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Betriebsmittel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/GemessenerFehler -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/GemessenerFehler">
+        <rdfs:label xml:lang="de">Gemessener Fehler</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Warnung"/>
+        <terms:description xml:lang="de">Die Maschine hat einen Fehler in einem verarbeiteten Produkt gemessen.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Gesamtorganisation -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Gesamtorganisation">
+        <rdfs:label xml:lang="de">Gesamtorganisation</rdfs:label>
+        <rdfs:label xml:lang="en">organization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Organisationseinheit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Grundstueck -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Grundstueck">
+        <rdfs:label xml:lang="de">Grundstück</rdfs:label>
+        <rdfs:label xml:lang="en">plot of land</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Betriebsmittel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Halbfabrikat -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Halbfabrikat">
+        <rdfs:label xml:lang="de">Halbfabrikat</rdfs:label>
+        <rdfs:label xml:lang="en">semi-finished product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Erzeugnisse"/>
+        <skos:note xml:lang="de">Quelle: Skript der Vorlesung &quot;Grundlagen der Betriebswirtschaftslehre&quot; von Prof. Hentze.</skos:note>
+        <terms:description xml:lang="de">Zugelieferte oder selbst hergestellte Teile, die durch Montage in das Fertigprodukt eingehen (z.B.: Schrauben, Reifen).</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Handlungsprozess -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Handlungsprozess">
+        <rdfs:label xml:lang="de">Handlungsprozess</rdfs:label>
+        <rdfs:label xml:lang="en">course of action</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Process"/>
+        <terms:description xml:lang="de">Ein Prozess der eine menschliche Handlung beschreibt.</terms:description>
+        <terms:description xml:lang="en">A process that is performed by a human.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Hilfsmittel -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Hilfsmittel">
+        <rdfs:label xml:lang="de">Hilfsmittel</rdfs:label>
+        <rdfs:label xml:lang="en">accessory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Betriebsmittel"/>
+        <terms:description xml:lang="en">A mechanical device that supports the production process, but does not perform the production itself.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Hilfsstoff -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Hilfsstoff">
+        <rdfs:label xml:lang="de">Hilfsstoff</rdfs:label>
+        <rdfs:label xml:lang="en">auxiliary material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Werkstoff"/>
+        <terms:description xml:lang="de">Nebenbestandteile: Stoffe, die zwar ebenfalls in das Fertigprodukt eingehen, die deren Funktion jedoch lediglich verstärken (z.B.: Nieten, Schrauben, Farben, Lacke).</terms:description>
+        <skos:note xml:lang="de">Quelle: Skript der Vorlesung &quot;Grundlagen der Betriebswirtschaftslehre&quot; von Prof. Hentze.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Inbetriebnahme -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Inbetriebnahme">
+        <rdfs:label xml:lang="de">Inbetriebnahme</rdfs:label>
+        <rdfs:label xml:lang="de">Inbetriebname</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Aufgabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Inbetriebnehmer -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Inbetriebnehmer">
+        <rdfs:label xml:lang="de">Inbetriebnehmer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Ausfuehrende"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Information -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Information">
+        <rdfs:label xml:lang="de">Information</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Erlaeuterung"/>
+        <terms:description xml:lang="de">Inhalt, der Informationen über den Zusammenhang eines Konzeptes zu Aspekten des Gesamtproduktionsprozesses enthält.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Inhalt -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Inhalt">
+        <rdfs:label xml:lang="de">Inhalt</rdfs:label>
+        <rdfs:label xml:lang="en">content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Inspektion -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Inspektion">
+        <rdfs:label xml:lang="de">Inspektion</rdfs:label>
+        <rdfs:label xml:lang="en">inspection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Instandhaltung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Instandhalter -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Instandhalter">
+        <rdfs:label xml:lang="de">Instandhalter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Ausfuehrende"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Instandhaltung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Instandhaltung">
+        <rdfs:label xml:lang="de">Instandhaltung</rdfs:label>
+        <rdfs:label xml:lang="en">Maintenance, repair, and operations</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Aufgabe"/>
+        <skos:note xml:lang="de">Unterteilung nach DIN 31051</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Instandsetzung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Instandsetzung">
+        <rdfs:label xml:lang="de">Instandsetzung</rdfs:label>
+        <rdfs:label xml:lang="en">repair</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Instandhaltung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Instruktion -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Instruktion">
+        <rdfs:label xml:lang="de">Instruktion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Erlaeuterung"/>
+        <terms:description xml:lang="de">Inhalt, der die Durchführung einer Maßnahme unterstützt.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Konzept -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Konzept">
+        <rdfs:label xml:lang="de">Konzept</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Inhalt"/>
+        <terms:description xml:lang="de">Text, der grundlegende Sachverhalte über Begriffe enthält.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Lowermanagement -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Lowermanagement">
+        <rdfs:label xml:lang="de">Lower Management</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Manager"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Management -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Management">
+        <rdfs:label xml:lang="de">Management</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Aufgabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Manager -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Manager">
+        <rdfs:label xml:lang="de">Manager</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Stelle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Maschinenzustand -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Maschinenzustand">
+        <rdfs:label xml:lang="de">Allgemeiner Maschinenzustand</rdfs:label>
+        <rdfs:label xml:lang="en">machine state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenzustand"/>
+        <terms:description xml:lang="de">Ein Maschinenzustand gibt den aktuellen Ist-Zustand einer Maschine wieder. Subklassen angepasst von DIN EN 13306:2010-12.
+Ein Maschinenzustand muss eine Priorität haben.</terms:description>
+        <terms:description xml:lang="en">Represents the current state of a machine (adapted from DIN EN 13306:2010-12. Has a priority, indicating its severity (10, highly critical, to 1, not critical)</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Massnahme -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Massnahme">
+        <rdfs:label xml:lang="de">Maßnahme</rdfs:label>
+        <rdfs:label xml:lang="en">procedure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Handlungsprozess"/>
+        <terms:description xml:lang="de">Beschreibt eine inhaltlich abgeschlossene, zeitliche und sachlogische Folge von Handlungen die von einem Beschäftigten durchgeführt werden.</terms:description>
+        <terms:description xml:lang="en">A self-contained course of actions executed by an employee.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/MechanischeBearbeitung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/MechanischeBearbeitung">
+        <rdfs:label xml:lang="de">Mechanische Bearbeitung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Bearbeitung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/MiddleManagement -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/MiddleManagement">
+        <rdfs:label xml:lang="de">Middle Management</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Manager"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Montage -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Montage">
+        <rdfs:label xml:lang="de">Montage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Aufgabe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Nacharbeitstaetigkeit -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Nacharbeitstaetigkeit">
+        <rdfs:label xml:lang="de">Nacharbeitstätigkeit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Bedienung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Organisationseinheit -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Organisationseinheit">
+        <rdfs:label xml:lang="de">Organisationseinheit</rdfs:label>
+        <rdfs:label xml:lang="en">organizational unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenkonzept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/PersoenlicheSchutzausruestung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/PersoenlicheSchutzausruestung">
+        <rdfs:label xml:lang="de">Persönliche Schutzausrüstung</rdfs:label>
+        <rdfs:label xml:lang="en">personal protective gear</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Hilfsmittel"/>
+        <terms:description xml:lang="en">Protective clothing, helmets, goggles, or other garments or equipment designed to protect the wearer&#39;s body from injury.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Personalfuehrung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Personalfuehrung">
+        <rdfs:label xml:lang="de">Personalführung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Process -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Process">
+        <rdfs:label xml:lang="de">Prozess</rdfs:label>
+        <rdfs:label xml:lang="en">process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/ProzessmodellElement"/>
+        <terms:description xml:lang="de">Eine durch ein Ereignis ausgelöste Folge von Zuständen, die in einen Endzustand mündet.</terms:description>
+        <terms:description xml:lang="en">A sequence of states, which is triggered by an event and leads to a final state.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Produkt -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Produkt">
+        <rdfs:label xml:lang="de">Produkt</rdfs:label>
+        <rdfs:label xml:lang="en">product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Erzeugnisse"/>
+        <terms:description xml:lang="de">In einem Produktionsverfahren erzeugte Güter.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Produktinformation -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Produktinformation">
+        <rdfs:label xml:lang="de">Produktinformation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Information"/>
+        <terms:description xml:lang="de">Informationen über den Zusammenhang eines Konzeptes zum Produkt.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Produktioninformation -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Produktioninformation">
+        <rdfs:label xml:lang="de">Produktioninformation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Information"/>
+        <terms:description xml:lang="de">Information über den Zusammenhang eines Konzeptes zur Produktion.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Produktionsgegenstand -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Produktionsgegenstand">
+        <rdfs:label xml:lang="de">Produktionsgegenstand</rdfs:label>
+        <rdfs:label xml:lang="en">production item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenkonzept"/>
+        <terms:description xml:lang="de">Diejenigen Dinge, die bei der Produktion von Gütern erforderlich sind oder erzeugt werden.</terms:description>
+        <terms:description xml:lang="en">Entities used for or created during the production of goods.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Produktionsmittel -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Produktionsmittel">
+        <rdfs:label xml:lang="en">production machine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Betriebsmittel"/>
+        <terms:description xml:lang="en">Stationary device directly involved in the production process.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Produktionsprozess -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Produktionsprozess">
+        <rdfs:label xml:lang="de">Produktionsprozess</rdfs:label>
+        <rdfs:label xml:lang="en">production process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenprozess"/>
+        <terms:description xml:lang="de">Beschreibt die notwendigen Schritte zur Fabrikation eines Produktes. Setzt sich aus Produktionsschritten zusammen.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Produktionsschritt -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Produktionsschritt">
+        <rdfs:label xml:lang="de">Produktionsschritt</rdfs:label>
+        <rdfs:label xml:lang="en">production step</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Prozesselement"/>
+        <terms:description xml:lang="de">Ein Teilprozess eines Produktionsprozesses, der einen in sich abgeschlossene Schrit darstellt.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/ProzessEinstellung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/ProzessEinstellung">
+        <rdfs:label xml:lang="de">Prozess-Einstellung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Inbetriebnahme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/ProzessZustand -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/ProzessZustand">
+        <rdfs:label xml:lang="de">Prozesszustand</rdfs:label>
+        <rdfs:label xml:lang="en">process state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenzustand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Prozesselement -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Prozesselement">
+        <rdfs:label xml:lang="de">Prozesselement</rdfs:label>
+        <rdfs:label xml:lang="en">process element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/ProzessmodellElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Prozessinformation -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Prozessinformation">
+        <rdfs:label xml:lang="de">Prozessinformation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Information"/>
+        <terms:description xml:lang="de">Information über den Zusammenhang eines Konzeptes zum Produktionsprozess.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/ProzessmodellElement -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/ProzessmodellElement">
+        <rdfs:label xml:lang="de">Prozessmodellentität</rdfs:label>
+        <rdfs:label xml:lang="en">processmodel entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenkonzept"/>
+        <terms:description xml:lang="de">Entitäten, die für Prozessmodellierung benötigt werden.</terms:description>
+        <terms:description xml:lang="en">Entities required for modelling processes.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Pruefmittel -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Pruefmittel">
+        <rdfs:label xml:lang="de">Mess- und Prüfmittel</rdfs:label>
+        <rdfs:label xml:lang="en">A mechanical device used for measuring and testing equipement.</rdfs:label>
+        <rdfs:label xml:lang="en">measuring and testing equipment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Hilfsmittel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/ReinigenderAnlage -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/ReinigenderAnlage">
+        <rdfs:label xml:lang="de">Reinigen der Anlage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Bedienung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Reinigungsmittel -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Reinigungsmittel">
+        <rdfs:label xml:lang="de">Equipment used for cleaning.</rdfs:label>
+        <rdfs:label xml:lang="de">Reinigungsmittel</rdfs:label>
+        <rdfs:label xml:lang="en">cleaning equipment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Hilfsmittel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Rohstoff -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Rohstoff">
+        <rdfs:label xml:lang="de">Rohstoff</rdfs:label>
+        <rdfs:label xml:lang="en">raw material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Werkstoff"/>
+        <terms:description xml:lang="de">Hauptbestandteile: Stoffe, die unmittelbar als wesentlicher Bestandteil in das Fertigprodukt eingehen.</terms:description>
+        <skos:note xml:lang="de">Quelle: Skript der Vorlesung &quot;Grundlagen der Betriebswirtschaftslehre&quot; von Prof. Hentze.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Schneiden -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Schneiden">
+        <rdfs:label xml:lang="de">Schneiden</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Stationsteil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/SoftwareZustand -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/SoftwareZustand">
+        <rdfs:label xml:lang="en">Software state</rdfs:label>
+        <rdfs:label xml:lang="en">software state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenzustand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Standort -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Standort">
+        <rdfs:label xml:lang="de">Standort</rdfs:label>
+        <rdfs:label xml:lang="en">location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Organisationseinheit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Station -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Station">
+        <rdfs:label xml:lang="de">Station</rdfs:label>
+        <rdfs:label xml:lang="en">station</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Produktionsmittel"/>
+        <terms:description xml:lang="de">Stationärer, in sich abgeschlossener Teil einer Anlage, der einen Schritt eines Produktionsprozesses realisiert.</terms:description>
+        <terms:description xml:lang="en">Stationary, self-contained part of a production machine that implements one step of a production process.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Stationsteil -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Stationsteil">
+        <rdfs:label xml:lang="de">Stationsteil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Produktionsmittel"/>
+        <terms:description xml:lang="de">Teile aus denen eine Station besteht</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Stelle -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Stelle">
+        <rdfs:label xml:lang="de">Stelle</rdfs:label>
+        <rdfs:label xml:lang="en">workplace</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Organisationseinheit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Stillstand -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Stillstand">
+        <rdfs:label xml:lang="de">Stillstand</rdfs:label>
+        <rdfs:label xml:lang="en">idle state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/FunktionsfaehigerZustand"/>
+        <terms:description xml:lang="de">Zustand einer in funktionsfähigem und betriebsfreiem Zustand befindlichen Einheit.</terms:description>
+        <terms:description xml:lang="en">State of an item which is in an up state and non-operating, during non-required time.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Stoerung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Stoerung">
+        <rdfs:label xml:lang="de">Störung</rdfs:label>
+        <rdfs:label xml:lang="en">disabled state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Maschinenzustand"/>
+        <terms:description xml:lang="de">Zustand  einer  Einheit,  gekennzeichnet  durch  ihre aus  irgendeinem  Grund  vorhandene  Unfähigkeit, eine geforderte Funktion zu erfüllen.</terms:description>
+        <terms:description xml:lang="en">State  of  a machine  characterised  by  its  inability  to perform a required function, for any reason.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Teil -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Teil">
+        <rdfs:label xml:lang="de">Teil</rdfs:label>
+        <rdfs:label xml:lang="en">product part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Erzeugnisse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/TeileEinlegen -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/TeileEinlegen">
+        <rdfs:label xml:lang="de">Teile einlegen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Bedienung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Topmanagement -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Topmanagement">
+        <rdfs:label xml:lang="de">Top Management</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Manager"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Uebung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Uebung">
+        <rdfs:label xml:lang="de">Übung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Erlaeuterung"/>
+        <terms:description xml:lang="de">Inhalt der eine Aktivität des Benutzers erfordert.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Verbesserung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Verbesserung">
+        <rdfs:label xml:lang="de">Verbesserung</rdfs:label>
+        <rdfs:label xml:lang="en">overhaul</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Instandhaltung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Vorrichtung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Vorrichtung">
+        <rdfs:label xml:lang="de">Vorrichtung</rdfs:label>
+        <rdfs:label xml:lang="en">support device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Hilfsmittel"/>
+        <terms:description xml:lang="en">A mechanical device supporting the manufacturing process by maintinig conformity and interchangeability, such as a jig and a fixture.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Warnung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Warnung">
+        <rdfs:label xml:lang="de">Warnungszustand</rdfs:label>
+        <rdfs:label xml:lang="en">warning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Betriebszustand"/>
+        <terms:description xml:lang="de">Zustand,  in  dem  eine  Einheit  die  geforderte Funktion erbringt, aber erkannt wurde, dass in absehbarer Zeit eine Störung auftreten wird.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Warnungsfrei -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Warnungsfrei">
+        <rdfs:label xml:lang="de">Warnungsfrei</rdfs:label>
+        <rdfs:label xml:lang="en">no warning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Betriebszustand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Warnungstext -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Warnungstext">
+        <rdfs:label xml:lang="de">Warnung</rdfs:label>
+        <rdfs:label xml:lang="en">Warning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Inhalt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Wartung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Wartung">
+        <rdfs:label xml:lang="de">Wartung</rdfs:label>
+        <rdfs:label xml:lang="en">maintenance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Instandhaltung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Werkstoff -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Werkstoff">
+        <rdfs:label xml:lang="de">Werkstoff</rdfs:label>
+        <rdfs:label xml:lang="en">material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Produktionsgegenstand"/>
+        <skos:note xml:lang="de">Quelle: Skript der Vorlesung &quot;Grundlagen der Betriebswirtschaftslehre&quot; von Prof. Hentze</skos:note>
+        <terms:description xml:lang="de">Werkstoffe sind Stoffe oder Teile, die dann zum fertigen Produkt weiterverarbeitet werden, d.h. sie werden zwecks Wertschöpfung verbraucht.</terms:description>
+        <terms:description xml:lang="en">Materials are physical entities consumed in the production of the finished product.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/WerkstoffLeer -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/WerkstoffLeer">
+        <rdfs:label xml:lang="de">Werkstoff leer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/ExterneStoerung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/WerkstoffWenig -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/WerkstoffWenig">
+        <rdfs:label xml:lang="de">Werkstoff wenig</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Warnung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Werkzeug -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Werkzeug">
+        <rdfs:label xml:lang="de">Werkzeug</rdfs:label>
+        <rdfs:label xml:lang="en">tool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Hilfsmittel"/>
+        <terms:description xml:lang="de">Allgemeines Mittel oder Gerät, um Dinge zu reparieren.</terms:description>
+        <terms:description xml:lang="en">A standalone physical device used to maintain the up-state of the production process.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Zerspanung -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/Zerspanung">
+        <rdfs:label xml:lang="de">Zerspanung</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/MechanischeBearbeitung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/geschaeftsprozess -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/geschaeftsprozess">
+        <rdfs:label xml:lang="de">Geschäftsprozess</rdfs:label>
+        <rdfs:label xml:lang="en">business process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/Domaenenprozess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Class -->
+
+    <owl:Class rdf:about="&rdfs;Class"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.appsist.de/ontology/AnlagenBetreuung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/AnlagenBetreuung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/AnlagenBetreuung"/>
+        <rdfs:label xml:lang="de">Anlagenbetreuung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Anlagenbediener -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Anlagenbediener">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Anlagenbediener"/>
+        <rdfs:label xml:lang="de">Anlagenbediener</rdfs:label>
+        <hatAufgabe rdf:resource="http://www.appsist.de/ontology/Bedienung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/AnlagenbedingteStoerung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/AnlagenbedingteStoerung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/AnlagenbedingteStoerung"/>
+        <rdfs:label xml:lang="de">Anlagenbedingte Störung</rdfs:label>
+        <rdfs:label xml:lang="en">internal disabled state</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">10</hatPrioritaet>
+        <terms:description xml:lang="de">Zustand  einer  Einheit, gekennzeichnet durch eine Unfähigkeit, eine geforderte Funktion auszuführen.</terms:description>
+        <terms:description xml:lang="en">State of a machine characterized either by an  inability  to  perform  a  required function.</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Anlagenfuehrer -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Anlagenfuehrer">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Anlagenfuehrer"/>
+        <rdfs:label xml:lang="de">Anlagenführer</rdfs:label>
+        <hatAufgabe rdf:resource="http://www.appsist.de/ontology/Inbetriebnahme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Anlagenoperator -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Anlagenoperator">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Anlagenoperator"/>
+        <rdfs:label xml:lang="de">Anlagenoperator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Anlagenoptimierung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Anlagenoptimierung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Anlagenoptimierung"/>
+        <rdfs:label xml:lang="de">Anlagenoptimierung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Bearbeitung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Bearbeitung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Bearbeitung"/>
+        <rdfs:label xml:lang="de">Bearbeitung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Bedienung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Bedienung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Bedienung"/>
+        <rdfs:label xml:lang="de">Bedienung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Betriebszustand -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Betriebszustand">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Betriebszustand"/>
+        <rdfs:label xml:lang="de">Betriebszustand</rdfs:label>
+        <rdfs:label xml:lang="en">operating state</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">1</hatPrioritaet>
+        <terms:description xml:lang="de">Zustand,  in  dem  eine  Einheit  die  geforderte Funktion erbringt.</terms:description>
+        <terms:description xml:lang="en">State when an item is performing as required.</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/DirekteFertigungsunterstützung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/DirekteFertigungsunterstützung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/DirekteFertigungsunterstützung"/>
+        <rdfs:label xml:lang="de">Direkte Fertigungsunterstützung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/EinfacheStoerungenBeheben -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/EinfacheStoerungenBeheben">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/EinfacheStoerungenBeheben"/>
+        <rdfs:label xml:lang="de">Einfache Störungen beheben</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/EinfacheWartungsaufgaben -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/EinfacheWartungsaufgaben">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/EinfacheWartungsaufgaben"/>
+        <rdfs:label xml:lang="de">Einfache Wartungsaufgaben</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/ExterneStoerung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/ExterneStoerung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ExterneStoerung"/>
+        <rdfs:label xml:lang="de">Externe Störung</rdfs:label>
+        <rdfs:label xml:lang="en">external disabled state</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">10</hatPrioritaet>
+        <terms:description xml:lang="de">Teilbereich der Störung einer in funktionsfähigem Zustand befindlichen Einheit, ein Zustand, der aufgrund eines Mangels an erforderlichen externen Hilfsmitteln auftritt.</terms:description>
+        <terms:description xml:lang="en">Subset of the disabled state when the item is in an up state, but lacks required external resources or is disabled due to planned actions other than maintenance.</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Fehlerbehebung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Fehlerbehebung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Fehlerbehebung"/>
+        <rdfs:label xml:lang="de">Fehlerbehebung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/FunktionsfaehigerZustand -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/FunktionsfaehigerZustand">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/FunktionsfaehigerZustand"/>
+        <rdfs:label xml:lang="de">Funktionsfaehiger Zustand</rdfs:label>
+        <rdfs:label xml:lang="en">up state</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">1</hatPrioritaet>
+        <terms:description xml:lang="de">Zustand einer Maschine, der dadurch gekennzeichnet ist, dass sie eine geforderte Funktion erfüllen kann.</terms:description>
+        <terms:description xml:lang="en">State of a machine characterized by the fact that it can perform a required function.</terms:description>
+        <bedingt rdf:resource="http://www.appsist.de/ontology/RelevanteBetriebsdatenKontrollieren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Gabelstapler -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Gabelstapler">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Foerdermittel"/>
+        <rdfs:label xml:lang="de">Gabelstapler</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/GemessenerFehler -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/GemessenerFehler">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/GemessenerFehler"/>
+        <rdfs:label xml:lang="de">Gemessener Fehler</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">7</hatPrioritaet>
+        <terms:description xml:lang="de">Die Maschine hat einen Fehler in einem verarbeiteten Produkt gemessen.</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Gummihammer -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Gummihammer">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Werkzeug"/>
+        <rdfs:label xml:lang="de">Gummihammer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Handschuhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Handschuhe">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/PersoenlicheSchutzausruestung"/>
+        <rdfs:label xml:lang="de">Handschuhe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Inbetriebnahme -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Inbetriebnahme">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Inbetriebnahme"/>
+        <rdfs:label xml:lang="de">Inbetriebnahme</rdfs:label>
+        <rdfs:label xml:lang="de">Inbetriebname</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Inbetriebnehmer -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Inbetriebnehmer">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Inbetriebnehmer"/>
+        <rdfs:label xml:lang="de">Inbetriebnehmer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Inbusschluessel -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Inbusschluessel">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Werkzeug"/>
+        <rdfs:label xml:lang="de">Inbusschlüssel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Industrie4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Industrie4">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Produktionsgegenstand"/>
+        <rdfs:label xml:lang="de">Industrie 4.0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Inspektion -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Inspektion">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Inspektion"/>
+        <rdfs:label xml:lang="de">Inspektion</rdfs:label>
+        <rdfs:label xml:lang="en">inspection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Instandhalter -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Instandhalter">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instandhalter"/>
+        <rdfs:label xml:lang="de">Instandhalter</rdfs:label>
+        <hatAufgabe rdf:resource="http://www.appsist.de/ontology/Instandhaltung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Instandhaltung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Instandhaltung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instandhaltung"/>
+        <rdfs:label xml:lang="de">Instandhaltung</rdfs:label>
+        <rdfs:label xml:lang="en">Maintenance, repair, and operations</rdfs:label>
+        <skos:note xml:lang="de">Unterteilung nach DIN 31051</skos:note>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Instandsetzung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Instandsetzung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instandsetzung"/>
+        <rdfs:label xml:lang="de">Instandsetzung</rdfs:label>
+        <rdfs:label xml:lang="en">repair</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Justierwelle -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Justierwelle">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Pruefmittel"/>
+        <rdfs:label xml:lang="de">Justierwelle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Koordinatenmesswerk -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Koordinatenmesswerk">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Pruefmittel"/>
+        <rdfs:label xml:lang="de">Koordinatenmesswerk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Kuehlschmiermittel -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Kuehlschmiermittel">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Betriebsstoff"/>
+        <rdfs:label xml:lang="de">Kühlschmiermittel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Laserschutzbrille -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Laserschutzbrille">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/PersoenlicheSchutzausruestung"/>
+        <rdfs:label xml:lang="de">Laserschutzbrille</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Lowermanagement -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Lowermanagement">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Lowermanagement"/>
+        <rdfs:label xml:lang="de">Lower Management</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Management -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Management">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Management"/>
+        <rdfs:label xml:lang="de">Management</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Manager -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Manager">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Manager"/>
+        <rdfs:label xml:lang="de">Manager</rdfs:label>
+        <hatAufgabe rdf:resource="http://www.appsist.de/ontology/Personalfuehrung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Maschinenzustand -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Maschinenzustand">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Maschinenzustand"/>
+        <rdfs:label xml:lang="de">Allgemeiner Maschinenzustand</rdfs:label>
+        <rdfs:label xml:lang="en">machine state</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">1</hatPrioritaet>
+        <terms:description xml:lang="de">Ein Maschinenzustand gibt den aktuellen Ist-Zustand einer Maschine wieder. Subklassen angepasst von DIN EN 13306:2010-12.
+Ein Maschinenzustand muss eine Priorität haben.</terms:description>
+        <terms:description xml:lang="en">Represents the current state of a machine (adapted from DIN EN 13306:2010-12. Has a priority, indicating its severity (10, highly critical, to 1, not critical)</terms:description>
+        <bedingt rdf:resource="http://www.appsist.de/ontology/VisuelleKontrolleDerMaschine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Messuhr -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Messuhr">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Pruefmittel"/>
+        <rdfs:label xml:lang="de">Messuhr</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/MiddleManagement -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/MiddleManagement">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/MiddleManagement"/>
+        <rdfs:label xml:lang="de">Middle Management</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Montage -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Montage">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Montage"/>
+        <rdfs:label xml:lang="de">Montage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Nacharbeitstaetigkeit -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Nacharbeitstaetigkeit">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Nacharbeitstaetigkeit"/>
+        <rdfs:label xml:lang="de">Nacharbeitstätigkeit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Oel -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Oel">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Betriebsstoff"/>
+        <rdfs:label xml:lang="de">Öl</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Personalfuehrung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Personalfuehrung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Personalfuehrung"/>
+        <rdfs:label xml:lang="de">Personalführung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Pneumatik -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Pneumatik">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Produktionsgegenstand"/>
+        <rdfs:label xml:lang="de">Pneumatik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/ProzessEinstellung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/ProzessEinstellung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ProzessEinstellung"/>
+        <rdfs:label xml:lang="de">Prozess-Einstellung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Putzlappen -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Putzlappen">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Reinigungsmittel"/>
+        <rdfs:label xml:lang="de">Putzlappen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/ReinigenderAnlage -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/ReinigenderAnlage">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ReinigenderAnlage"/>
+        <rdfs:label xml:lang="de">Reinigen der Anlage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Reinigungsmittel -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Reinigungsmittel">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Hilfsstoff"/>
+        <rdfs:label xml:lang="de">Equipment used for cleaning.</rdfs:label>
+        <rdfs:label xml:lang="de">Reinigungsmittel</rdfs:label>
+        <rdfs:label xml:lang="en">cleaning equipment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/RelevanteBetriebsdatenKontrollieren -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/RelevanteBetriebsdatenKontrollieren">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Massnahme"/>
+        <rdfs:label xml:lang="de">Relevante Betriebsdaten kontrollieren</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Rohstoff -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Rohstoff">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Rohstoff"/>
+        <rdfs:label xml:lang="de">Rohstoff</rdfs:label>
+        <rdfs:label xml:lang="en">raw material</rdfs:label>
+        <terms:description xml:lang="de">Hauptbestandteile: Stoffe, die unmittelbar als wesentlicher Bestandteil in das Fertigprodukt eingehen.</terms:description>
+        <skos:note xml:lang="de">Quelle: Skript der Vorlesung &quot;Grundlagen der Betriebswirtschaftslehre&quot; von Prof. Hentze.</skos:note>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Schieblehre -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Schieblehre">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Pruefmittel"/>
+        <rdfs:label xml:lang="de">Schieblehre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Schneiden -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Schneiden">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Schneiden"/>
+        <rdfs:label xml:lang="de">Schneiden</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Schraubendreher -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Schraubendreher">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Werkzeug"/>
+        <rdfs:label xml:lang="de">Schraubendreher</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Schraubenschluessel -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Schraubenschluessel">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Werkzeug"/>
+        <rdfs:label xml:lang="de">Schraubenschlüssel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Schutzbrille -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Schutzbrille">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/PersoenlicheSchutzausruestung"/>
+        <rdfs:label xml:lang="de">Schutzbrille</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Schweissbrenner-Schluessel -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Schweissbrenner-Schluessel">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Werkzeug"/>
+        <rdfs:label xml:lang="de">Schweißbrenner-Schlüssel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Seitenschneider -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Seitenschneider">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Werkzeug"/>
+        <rdfs:label xml:lang="de">Seitenschneider</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Sicherheitsschuhe -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Sicherheitsschuhe">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/PersoenlicheSchutzausruestung"/>
+        <rdfs:label xml:lang="de">Sicherheitsschuhe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/StationsgehaeuseVonAussenReinigen -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/StationsgehaeuseVonAussenReinigen">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Massnahme"/>
+        <rdfs:label xml:lang="de">Stationsgehäuse von außen reinigen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/StationsgehaeuseVonInnenReinigen -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/StationsgehaeuseVonInnenReinigen">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Massnahme"/>
+        <rdfs:label xml:lang="de">Stationsgehäuse von innen reinigen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Stillstand -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Stillstand">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Stillstand"/>
+        <rdfs:label xml:lang="de">Stillstand</rdfs:label>
+        <rdfs:label xml:lang="en">idle state</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">1</hatPrioritaet>
+        <terms:description xml:lang="de">Zustand einer in funktionsfähigem und betriebsfreiem Zustand befindlichen Einheit.</terms:description>
+        <terms:description xml:lang="en">State of an item which is in an up state and non-operating, during non-required time.</terms:description>
+        <bedingt rdf:resource="http://www.appsist.de/ontology/StationsgehaeuseVonAussenReinigen"/>
+        <bedingt rdf:resource="http://www.appsist.de/ontology/StationsgehaeuseVonInnenReinigen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Stoerung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Stoerung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Stoerung"/>
+        <rdfs:label xml:lang="de">Störung</rdfs:label>
+        <rdfs:label xml:lang="en">disabled state</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">10</hatPrioritaet>
+        <terms:description xml:lang="de">Zustand  einer  Einheit,  gekennzeichnet  durch  ihre aus  irgendeinem  Grund  vorhandene  Unfähigkeit, eine geforderte Funktion zu erfüllen.</terms:description>
+        <terms:description xml:lang="en">State  of  a machine  characterised  by  its  inability  to perform a required function, for any reason.</terms:description>
+        <bedingt rdf:resource="http://www.appsist.de/ontology/StationsgehaeuseVonAussenReinigen"/>
+        <bedingt rdf:resource="http://www.appsist.de/ontology/StationsgehaeuseVonInnenReinigen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/TeileEinlegen -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/TeileEinlegen">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/TeileEinlegen"/>
+        <rdfs:label xml:lang="de">Teile einlegen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Topmanagement -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Topmanagement">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Topmanagement"/>
+        <rdfs:label xml:lang="de">Top Management</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Tuschierfarbe -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Tuschierfarbe">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Hilfsstoff"/>
+        <rdfs:label xml:lang="de">Tuschierfarbe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Verbesserung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Verbesserung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Verbesserung"/>
+        <rdfs:label xml:lang="de">Verbesserung</rdfs:label>
+        <rdfs:label xml:lang="en">overhaul</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/VisuelleKontrolleDerMaschine -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/VisuelleKontrolleDerMaschine">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Massnahme"/>
+        <rdfs:label xml:lang="de">Visuelle Kontrolle der Maschine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Warnung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Warnung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Warnung"/>
+        <rdfs:label xml:lang="de">Warnungszustand</rdfs:label>
+        <rdfs:label xml:lang="en">warning</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">7</hatPrioritaet>
+        <terms:description xml:lang="de">Zustand,  in  dem  eine  Einheit  die  geforderte Funktion erbringt, aber erkannt wurde, dass in absehbarer Zeit eine Störung auftreten wird.</terms:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Warnungsfrei -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Warnungsfrei">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Warnungsfrei"/>
+        <rdfs:label xml:lang="de">Warnungsfrei</rdfs:label>
+        <rdfs:label xml:lang="en">no warning</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">1</hatPrioritaet>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Wartung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Wartung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Wartung"/>
+        <rdfs:label xml:lang="de">Wartung</rdfs:label>
+        <rdfs:label xml:lang="en">maintenance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Weißspray -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Weißspray">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Hilfsstoff"/>
+        <rdfs:label xml:lang="de">Weißspray</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/WerkstoffLeer -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/WerkstoffLeer">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/WerkstoffLeer"/>
+        <rdfs:label xml:lang="de">Werkstoff leer</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">10</hatPrioritaet>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/WerkstoffWenig -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/WerkstoffWenig">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/WerkstoffWenig"/>
+        <rdfs:label xml:lang="de">Werkstoff wenig</rdfs:label>
+        <hatPrioritaet rdf:datatype="&xsd;integer">7</hatPrioritaet>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/Zerspanung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/Zerspanung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Zerspanung"/>
+        <rdfs:label xml:lang="de">Zerspanung</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

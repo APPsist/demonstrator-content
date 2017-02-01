@@ -1,0 +1,756 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.appsist.de/ontology/demonstrator/demonstrator.owl#"
+     xml:base="http://www.appsist.de/ontology/demonstrator/demonstrator.owl"
+     xmlns:BPMN="http://www.appsist.de/ontology/BPMN/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.appsist.de/ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.appsist.de/ontology/demonstrator/Bauteilverlust/">
+        <owl:imports rdf:resource="http://www.appsist.de/ontology/demonstrator/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.4</owl:versionInfo>
+        <rdfs:label xml:lang="de">Ergänzungen der APPsist Demonstrator Ontologie: Bauteilverlust</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Bauteilverlust -->
+
+    <rdf:Description rdf:about="http://www.appsist.de/ontology/demonstrator/Bauteilverlust">
+        <ontology:bedingt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/a8c36957-74b7-4958-87f7-1d3015543548 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/a8c36957-74b7-4958-87f7-1d3015543548">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_70"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/aba357a2-7999-4cc6-bb43-03f4bb45e77f -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/aba357a2-7999-4cc6-bb43-03f4bb45e77f">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_66"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/acdbd29f-052a-45c3-8ec0-550a108db1b4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/acdbd29f-052a-45c3-8ec0-550a108db1b4">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/8619403d-18d7-4769-bad7-ba7452888864"/>
+        <ontology:format>text/html</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/b12374a3-6ade-4f10-be4a-c00576c985ca -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/b12374a3-6ade-4f10-be4a-c00576c985ca">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_30"/>
+        <ontology:format>text/html+snippet</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/b1467320-3676-4ae6-b1ee-ceb5d45060c3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/b1467320-3676-4ae6-b1ee-ceb5d45060c3">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_97"/>
+        <ontology:format>text/html</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Massnahme"/>
+        <ontology:hatAktivitaet rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/c2b42f41-2f87-4f44-8b18-3ce4b0ea2567"/>
+        <ontology:hatAktivitaet rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/d4670ef9-281e-4eb8-962a-3067f25de4fc"/>
+        <ontology:hatAktivitaet rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/4778835f-9a38-4551-aed5-7a0321245d60"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_11"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_3"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_40"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_66"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_70"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_8"/>
+        <terms:description xml:lang="de">Prozess zur Behebung eines Bauteilverlusts</terms:description>
+        <rdfs:label xml:lang="de">Bauteilverlust beheben</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/bb648559-a3a2-411c-a09e-402421a4a398 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/bb648559-a3a2-411c-a09e-402421a4a398">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_8"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/bdf0da0a-97d1-4ec0-9d3b-b667bb20e4b7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/bdf0da0a-97d1-4ec0-9d3b-b667bb20e4b7">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_22"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/be3c4445-774f-4bc8-8511-0ec6a5423b3f -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/be3c4445-774f-4bc8-8511-0ec6a5423b3f">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_55"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/be84dc0d-2d0c-40f0-a7f0-c4a32920e32c -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/be84dc0d-2d0c-40f0-a7f0-c4a32920e32c">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_90"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/c34944e7-6c18-493f-8390-adad72db1dca -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/c34944e7-6c18-493f-8390-adad72db1dca">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_102"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/c6b796cd-af99-41bf-b0ef-ad4671332183 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/c6b796cd-af99-41bf-b0ef-ad4671332183">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_77"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/d5b504eb-a4f3-4646-bbe7-99ebb8ab9414 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/d5b504eb-a4f3-4646-bbe7-99ebb8ab9414">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_11"/>
+        <ontology:format>text/html</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/d7de98da-2a20-4173-853e-bd9c2b632931 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/d7de98da-2a20-4173-853e-bd9c2b632931">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/4778835f-9a38-4551-aed5-7a0321245d60"/>
+        <ontology:format>text/html</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/df8261c8-a9b7-4c85-9d88-6beb9f1dd7a0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/df8261c8-a9b7-4c85-9d88-6beb9f1dd7a0">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/d4670ef9-281e-4eb8-962a-3067f25de4fc"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/e6ee80f6-c4f0-4c2c-a5de-dce102e262ca -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/e6ee80f6-c4f0-4c2c-a5de-dce102e262ca">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_17"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/f02a32c6-323e-4775-a74f-45a147a7568d -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/f02a32c6-323e-4775-a74f-45a147a7568d">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_40"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/f14787b6-d458-4209-84e4-7c6383c52936 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/f14787b6-d458-4209-84e4-7c6383c52936">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_51"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/f1924f0c-99d1-4c2d-94e9-ca80de5017f3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/f1924f0c-99d1-4c2d-94e9-ca80de5017f3">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_111"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/f774fe59-cdff-4a58-a569-fdda87d21dfe -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/f774fe59-cdff-4a58-a569-fdda87d21dfe">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_24"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/02685b2e-dd06-405d-8389-9e91b5518745 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/02685b2e-dd06-405d-8389-9e91b5518745">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_94"/>
+        <ontology:format>text/html</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/03967cb1-2414-4563-b077-cf5748a6817c -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/03967cb1-2414-4563-b077-cf5748a6817c">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/498228fa-90dc-4688-838f-6c7b475eca02"/>
+        <ontology:format>text/html</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/3b24b642-510c-4780-8aeb-e3510759004c -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/3b24b642-510c-4780-8aeb-e3510759004c">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_57"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/3d52c295-fa10-4bc1-8945-c2bac6ec3983 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/3d52c295-fa10-4bc1-8945-c2bac6ec3983">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/26c6accb-ddbe-4110-9d6d-1cd0eebc3e1a"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/34748ae4-29e8-427b-87ce-1faa43cc9f0a -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/34748ae4-29e8-427b-87ce-1faa43cc9f0a">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_68"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/4b062e6f-a26e-4b19-ba6a-a9a4cdf04d60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/4b062e6f-a26e-4b19-ba6a-a9a4cdf04d60">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_42"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/5bbd83ca-9f9f-4fa1-acf9-7a8b3a01686c -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/5bbd83ca-9f9f-4fa1-acf9-7a8b3a01686c">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_44"/>
+        <ontology:format>text/html</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/5be1a88d-65a2-4307-bb3e-0c46f9e7b596 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/5be1a88d-65a2-4307-bb3e-0c46f9e7b596">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_79"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/7b6b9ca9-1947-42b4-a67f-3f44df567423 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/7b6b9ca9-1947-42b4-a67f-3f44df567423">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_3"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/8093700e-bd77-4265-ba0c-29dc8e0f7f3e -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/8093700e-bd77-4265-ba0c-29dc8e0f7f3e">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_34"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/81d7dff1-b2b6-4b19-a6c7-f4b76968f154 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/81d7dff1-b2b6-4b19-a6c7-f4b76968f154">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/f4b6a54e-c98b-4309-889a-23bb74ec3249"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/85fd68f5-2f40-4e27-9688-1f49a8a249aa -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/85fd68f5-2f40-4e27-9688-1f49a8a249aa">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_50"/>
+        <ontology:format>text/html</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/86ce4fba-9d83-4c6a-b45f-ff01c50b23d0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/86ce4fba-9d83-4c6a-b45f-ff01c50b23d0">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/c2b42f41-2f87-4f44-8b18-3ce4b0ea2567"/>
+        <ontology:format>text/html</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/9331a2f1-2a87-4843-86cb-4649a35d10f1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/9331a2f1-2a87-4843-86cb-4649a35d10f1">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_56"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/9531f4c7-0212-4fb7-956f-ab42f555cc1d -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/9531f4c7-0212-4fb7-956f-ab42f555cc1d">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_86"/>
+        <ontology:format>image/jpg</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/959db45e-6d36-4f7b-99b4-a98f7387e036 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/959db45e-6d36-4f7b-99b4-a98f7387e036">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Instruktion"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_20"/>
+        <ontology:format>image/png</ontology:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_102 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_102">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Experten benachrichtigen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_11">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Bauteilqualität prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_111 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_111">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Sensorausrichtung prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_17">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Bauteil entnehmen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_20">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Reset durchführen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_22">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Fehlermeldung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_24">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Experten benachrichtigen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_3">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Bauteil finden</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_30">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Prozessdurchlauf kontrollieren</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_34">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Experten benachrichtigen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_40">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Sicherheitsanweisungen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_42">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Tüschlüssel holen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_44">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Tür entriegeln und öffnen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_50">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Tür schließen und verriegeln</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_51">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Türschlüssel platzieren</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_55">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Robotermotoren einschalten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_56">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Roboterprogramm starten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_57 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_57">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Prozessdurchlauf starten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_66">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Bauteil auf Band legen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_68 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_68">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Sensor verbinden</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_70">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Bauteil entsorgen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_77 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_77">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Verbindung des Sensors prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_79 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_79">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Sensor ausrichten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_8">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Prozessdurchlauf starten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_86">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Ausrichtung der Stationen prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_90 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_90">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Stationen ausrichten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_94">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Blockierungen identifizieren</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_97 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_97">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Blockierungen entfernen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/c2b42f41-2f87-4f44-8b18-3ce4b0ea2567 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/c2b42f41-2f87-4f44-8b18-3ce4b0ea2567">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_20"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_22"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_30"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_34"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/8619403d-18d7-4769-bad7-ba7452888864"/>
+        <terms:description xml:lang="de">Unterprozess zum Starten des Prozesses</terms:description>
+        <rdfs:label xml:lang="de">Prozess starten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/d4670ef9-281e-4eb8-962a-3067f25de4fc -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/d4670ef9-281e-4eb8-962a-3067f25de4fc">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_17"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/f4b6a54e-c98b-4309-889a-23bb74ec3249"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/26c6accb-ddbe-4110-9d6d-1cd0eebc3e1a"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/498228fa-90dc-4688-838f-6c7b475eca02"/>
+        <terms:description xml:lang="de">Unterprozess zur Behebung des Fehlers und der Ursache in der Roboterstation</terms:description>
+        <rdfs:label xml:lang="de">Fehler und Ursache in Roboterstaton beheben</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/f4b6a54e-c98b-4309-889a-23bb74ec3249 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/f4b6a54e-c98b-4309-889a-23bb74ec3249">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_42"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_44"/>
+        <rdfs:label xml:lang="de">Tür öffnen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/26c6accb-ddbe-4110-9d6d-1cd0eebc3e1a -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/26c6accb-ddbe-4110-9d6d-1cd0eebc3e1a">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_50"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_51"/>
+        <rdfs:label xml:lang="de">Tür schließen und verriegeln</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/4778835f-9a38-4551-aed5-7a0321245d60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/4778835f-9a38-4551-aed5-7a0321245d60">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_111"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_24"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_68"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_77"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_79"/>
+        <terms:description xml:lang="de">Unterprozess zur Behebung der Fehlerursache in der Verpackungsstation</terms:description>
+        <rdfs:label xml:lang="de">Fehlerursache in Verpackungsstation beheben</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/498228fa-90dc-4688-838f-6c7b475eca02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/498228fa-90dc-4688-838f-6c7b475eca02">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_102"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_86"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_90"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_94"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_97"/>
+        <rdfs:label xml:lang="de">Fehlerursache beheben (RS)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/8619403d-18d7-4769-bad7-ba7452888864 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/8619403d-18d7-4769-bad7-ba7452888864">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_55"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_56"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/ba66718d-607c-4c81-82d7-f1a55fbbef3f/_57"/>
+        <rdfs:label xml:lang="de">Anlagenstart durchführenn</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

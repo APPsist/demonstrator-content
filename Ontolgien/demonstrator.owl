@@ -1,0 +1,526 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.appsist.de/ontology/demonstrator/demonstrator.owl#"
+     xml:base="http://www.appsist.de/ontology/demonstrator/demonstrator.owl"
+     xmlns:demonstrator2="http://www.appsist.de/ontology/demonstrator/59"
+     xmlns:demonstrator3="http://www.appsist.de/ontology/demonstrator/25"
+     xmlns:static="file:///static/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:demonstrator4="http://www.appsist.de/ontology/demonstrator/5714"
+     xmlns:demonstrator5="http://www.appsist.de/ontology/demonstrator/239"
+     xmlns:demonstrator6="http://www.appsist.de/ontology/demonstrator/31"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:demonstrator="http://www.appsist.de/ontology/demonstrator/"
+     xmlns:ontology="http://www.appsist.de/ontology/">
+    <owl:Ontology rdf:about="http://www.appsist.de/ontology/demonstrator/">
+        <owl:imports rdf:resource="http://www.appsist.de/ontology/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.4</owl:versionInfo>
+        <rdfs:label xml:lang="de">Demonstrator-spezifische Ergänzungen der APPsist-Ontologie</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Bauteilverlust -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/demonstrator/Bauteilverlust">
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/AnlagenbedingteStoerung"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/DeckelmagazinLeer -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/demonstrator/DeckelmagazinLeer">
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/WerkstoffLeer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/FedermagazinLeer -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/demonstrator/FedermagazinLeer">
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/WerkstoffLeer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/TuerOffen -->
+
+    <owl:Class rdf:about="http://www.appsist.de/ontology/demonstrator/TuerOffen">
+        <rdfs:subClassOf rdf:resource="http://www.appsist.de/ontology/AnlagenbedingteStoerung"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///static/MPSStationRoboterHandbuch.pdf -->
+
+    <owl:NamedIndividual rdf:about="file:///static/MPSStationRoboterHandbuch.pdf">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Produktioninformation"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenoperatorDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <ontology:hasPreview>MPSStationRoboterHandbuch.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">MPS Station Roboter - Handbuch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- file:///static/MPSStationRoboterProgrammierhandbuch.pdf -->
+
+    <owl:NamedIndividual rdf:about="file:///static/MPSStationRoboterProgrammierhandbuch.pdf">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Information"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/Anlagenfuehrer"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <ontology:hasPreview>MPSStationRoboterProgrammierhandbuch.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">MPS Station Roboter - Programmierhandbuch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- file:///static/MPSStationRoboterSicherheitshinweise.pdf -->
+
+    <owl:NamedIndividual rdf:about="file:///static/MPSStationRoboterSicherheitshinweise.pdf">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Produktioninformation"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <ontology:hasPreview>MPSStationRoboterSicherheitshinweise.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">MPS Station Roboter - Sicherheitshinweise</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- file:///static/WissenselementZelleGesamtExperte.pdf -->
+
+    <owl:NamedIndividual rdf:about="file:///static/WissenselementZelleGesamtExperte.pdf">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Produktioninformation"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenoperatorDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/Demonstrator"/>
+        <ontology:hasPreview>WissenselementZelleGesamtExperte.jpg</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Verkettete Montageanlage - Gesamtaufbau</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- file:///static/6_Industrie_4.0_komplett/index.html?skipcheck -->
+
+    <owl:NamedIndividual rdf:about="file:///static/6_Industrie_4.0_komplett/index.html?skipcheck">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Definition"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenbedienerDemonstrator"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenoperatorDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/Industrie4"/>
+        <ontology:format>text/html</ontology:format>
+        <ontology:hasPreview>6_Industrie_4.0_komplett.jpg</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Was ist Industrie 4.0?</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- file:///static/7_Basiswissen_Pneumatik_HM/index.html?skipcheck -->
+
+    <owl:NamedIndividual rdf:about="file:///static/7_Basiswissen_Pneumatik_HM/index.html?skipcheck">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Definition"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenbedienerDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/Pneumatik"/>
+        <ontology:format>text/html</ontology:format>
+        <ontology:hasPreview>7_Basiswissen_Pneumatik_HM.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Basiswissen Pneumatik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- file:///static/8_MPS_Station_Montage_mit_Roboter_HM/index.html?skipcheck -->
+
+    <owl:NamedIndividual rdf:about="file:///static/8_MPS_Station_Montage_mit_Roboter_HM/index.html?skipcheck">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Prozessinformation"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenoperatorDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <ontology:format>text/html</ontology:format>
+        <ontology:hasPreview>8_MPS_Station_Montage_mit_Roboter_HM.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Roboter Ausbaustufe mit MPS Modulen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/AnlagenbedienerDemonstrator -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/AnlagenbedienerDemonstrator">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Anlagenbediener"/>
+        <ontology:hatAufgabe rdf:resource="http://www.appsist.de/ontology/demonstrator/MontageDemonstrator"/>
+        <rdfs:label xml:lang="de">Anlagenbediener am Demonstrator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/AnlagenoperatorDemonstrator -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/AnlagenoperatorDemonstrator">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Anlagenoperator"/>
+        <ontology:hatAufgabe rdf:resource="http://www.appsist.de/ontology/demonstrator/FehlerbehebungDemonstrator"/>
+        <rdfs:label xml:lang="de">Anlagenoperator am Demonstrator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/ArbeitsplatzgruppeDemonstrator -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/ArbeitsplatzgruppeDemonstrator">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Arbeitsplatzgruppe"/>
+        <rdfs:label xml:lang="de">Arbeitsplatzgruppe Demonstrator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Bauteilverlust -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/Bauteilverlust">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/demonstrator/Bauteilverlust"/>
+        <ontology:hatPrioritaet rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ontology:hatPrioritaet>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Deckel -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/Deckel">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Halbfabrikat"/>
+        <rdfs:label xml:lang="de">Deckel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Deckelmagazin -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/Deckelmagazin">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Stationsteil"/>
+        <ontology:isPartOf rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <rdfs:label xml:lang="de">Deckelmagazin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/DeckelmagazinLeer -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/DeckelmagazinLeer">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/demonstrator/DeckelmagazinLeer"/>
+        <ontology:hatPrioritaet rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ontology:hatPrioritaet>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Demonstrator -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/Demonstrator">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Anlage"/>
+        <ontology:bringtHervor rdf:resource="http://www.appsist.de/ontology/demonstrator/Pneumatikzylinder"/>
+        <ontology:hasPart rdf:resource="http://www.appsist.de/ontology/demonstrator/StationLager"/>
+        <ontology:hasPart rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <ontology:hasPart rdf:resource="http://www.appsist.de/ontology/demonstrator/StationVerpackung"/>
+        <ontology:hasPart rdf:resource="http://www.appsist.de/ontology/demonstrator/StationVersand"/>
+        <ontology:hasPart rdf:resource="http://www.appsist.de/ontology/demonstrator/StationVormontage"/>
+        <ontology:isPartOf rdf:resource="http://www.appsist.de/ontology/demonstrator/ArbeitsplatzgruppeDemonstrator"/>
+        <ontology:realisiertProzess rdf:resource="http://www.appsist.de/ontology/demonstrator/Zylindermontageprozess"/>
+        <ontology:hatPrioritaet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontology:hatPrioritaet>
+        <rdfs:label xml:lang="de">Demonstrator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Feder -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/Feder">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Halbfabrikat"/>
+        <rdfs:label xml:lang="de">Feder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Federmagazin -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/Federmagazin">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Stationsteil"/>
+        <ontology:isPartOf rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <rdfs:label xml:lang="de">Federmagazin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/FedermagazinLeer -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/FedermagazinLeer">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/demonstrator/FedermagazinLeer"/>
+        <ontology:hatPrioritaet rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ontology:hatPrioritaet>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/FehlerbehebungDemonstrator -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/FehlerbehebungDemonstrator">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Fehlerbehebung"/>
+        <rdfs:label xml:lang="de">Fehlerbehebung am Demonstrator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Modulmagazin -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/Modulmagazin">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Stationsteil"/>
+        <ontology:isPartOf rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <rdfs:label xml:lang="de">Modulmagazin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/MontageDemonstrator -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/MontageDemonstrator">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Montage"/>
+        <rdfs:label xml:lang="de">Montage des Demonstratorzylinders</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Pneumatikzylinder -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/Pneumatikzylinder">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Produkt"/>
+        <rdfs:label xml:lang="de">Pneumatikzylinder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/StationLager -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/StationLager">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Station"/>
+        <ontology:isPartOf rdf:resource="http://www.appsist.de/ontology/demonstrator/Demonstrator"/>
+        <rdfs:label xml:lang="de">Station Lager</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/StationMontage -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/StationMontage">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Station"/>
+        <ontology:hasPart rdf:resource="http://www.appsist.de/ontology/demonstrator/Deckelmagazin"/>
+        <ontology:hasPart rdf:resource="http://www.appsist.de/ontology/demonstrator/Federmagazin"/>
+        <ontology:hasPart rdf:resource="http://www.appsist.de/ontology/demonstrator/Modulmagazin"/>
+        <ontology:isPartOf rdf:resource="http://www.appsist.de/ontology/demonstrator/Demonstrator"/>
+        <rdfs:label xml:lang="de">Station Montage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/StationVerpackung -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/StationVerpackung">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Station"/>
+        <ontology:isPartOf rdf:resource="http://www.appsist.de/ontology/demonstrator/Demonstrator"/>
+        <rdfs:label xml:lang="de">Station Verpackung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/StationVersand -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/StationVersand">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Station"/>
+        <ontology:isPartOf rdf:resource="http://www.appsist.de/ontology/demonstrator/Demonstrator"/>
+        <rdfs:label xml:lang="de">Station Versand</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/StationVormontage -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/StationVormontage">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Station"/>
+        <ontology:isPartOf rdf:resource="http://www.appsist.de/ontology/demonstrator/Demonstrator"/>
+        <rdfs:label xml:lang="de">Station Vormontage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/TuerOffen -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/TuerOffen">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/demonstrator/TuerOffen"/>
+        <ontology:hatPrioritaet rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ontology:hatPrioritaet>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/Zylindermontageprozess -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/Zylindermontageprozess">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Produktionsprozess"/>
+        <rdfs:label xml:lang="de">Montageprozess der Zylinder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/a56e5f44-c706-4049-bb78-e58d074b487e -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/a56e5f44-c706-4049-bb78-e58d074b487e">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Definition"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/Modulmagazin"/>
+        <ontology:hasPreview>a56e5f44-c706-4049-bb78-e58d074b487e.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Übersicht des Modul Magazin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/b2280e82-2d6f-4888-9edc-6cf5ccc8bd08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/b2280e82-2d6f-4888-9edc-6cf5ccc8bd08">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Prozessinformation"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenbedienerDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <ontology:hasPreview>b2280e82-2d6f-4888-9edc-6cf5ccc8bd08.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Übersicht: Funktion der Roboterzelle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/c4bc9f83-aeea-4680-8c79-488b0e7c6e49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/c4bc9f83-aeea-4680-8c79-488b0e7c6e49">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Prozessinformation"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <ontology:hasPreview>c4bc9f83-aeea-4680-8c79-488b0e7c6e49.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Montageprozess in der Roboterzelle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/239c799d-0c2e-43b0-96fd-c79b76bdd344 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/239c799d-0c2e-43b0-96fd-c79b76bdd344">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Definition"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenbedienerDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/Federmagazin"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/67bbe15a-387c-4342-b8fc-2c4a6a779a09/_41"/>
+        <ontology:hasPreview>239c799d-0c2e-43b0-96fd-c79b76bdd344.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Funktionsbeschreibung des Federmagazin (Anfänger)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/25f5a67d-2e14-4176-bda0-b1667f4bd24a -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/25f5a67d-2e14-4176-bda0-b1667f4bd24a">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Definition"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenoperatorDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/Deckelmagazin"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_3"/>
+        <ontology:hasPreview>25f5a67d-2e14-4176-bda0-b1667f4bd24a.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Funktionsbeschreibung des Deckelmagazin (Experte)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/31be52c4-4d44-4150-a1c7-dfa6ab68ab70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/31be52c4-4d44-4150-a1c7-dfa6ab68ab70">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Definition"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenbedienerDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/Deckelmagazin"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_3"/>
+        <ontology:hasPreview>31be52c4-4d44-4150-a1c7-dfa6ab68ab70.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Funktionsbeschreibung des Deckelmagazin (Anfänger)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/5714f28d-e5e8-4660-b955-95d658038282 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/5714f28d-e5e8-4660-b955-95d658038282">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Definition"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenoperatorDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/Federmagazin"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/67bbe15a-387c-4342-b8fc-2c4a6a779a09/f21b4d33-123f-4841-b6e9-9dadbb733574"/>
+        <ontology:hasPreview>5714f28d-e5e8-4660-b955-95d658038282.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Funktionsbeschreibung des Federmagazin (Experte)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/59fc26ff-6339-4f6b-85c3-dfe5914b0f83 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/59fc26ff-6339-4f6b-85c3-dfe5914b0f83">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Prozessinformation"/>
+        <ontology:hatZielgruppe rdf:resource="http://www.appsist.de/ontology/demonstrator/AnlagenoperatorDemonstrator"/>
+        <ontology:informiertUeber rdf:resource="http://www.appsist.de/ontology/demonstrator/StationMontage"/>
+        <ontology:hasPreview>59fc26ff-6339-4f6b-85c3-dfe5914b0f83.png</ontology:hasPreview>
+        <rdfs:label xml:lang="de">Im Detail: Funktion der Roboterzelle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/67bbe15a-387c-4342-b8fc-2c4a6a779a09/_41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/67bbe15a-387c-4342-b8fc-2c4a6a779a09/_41"/>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/67bbe15a-387c-4342-b8fc-2c4a6a779a09/f21b4d33-123f-4841-b6e9-9dadbb733574 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/67bbe15a-387c-4342-b8fc-2c4a6a779a09/f21b4d33-123f-4841-b6e9-9dadbb733574"/>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.appsist.de/ontology/demonstrator/DeckelmagazinLeer">
+        <rdfs:label xml:lang="de">Deckelmagazin leer</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.appsist.de/ontology/demonstrator/FedermagazinLeer">
+        <rdfs:label xml:lang="de">Federmagazin leer</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.appsist.de/ontology/demonstrator/TuerOffen">
+        <rdfs:label xml:lang="de">Tür offen</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY terms "http://purl.org/dc/terms/" >
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+	<!ENTITY ontology "http://www.appsist.de/ontology/" >
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+	<!ENTITY BPMN "http://www.appsist.de/ontology/BPMN/" >
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.appsist.de/ontology/demonstrator/demonstratorDruckluftversorgungUnterbrochen.owl#"
+     xml:base="http://www.appsist.de/ontology/demonstrator/demonstratorDruckluftversorgungUnterbrochen.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.appsist.de/ontology/">
+    <owl:Ontology rdf:about="http://www.appsist.de/ontology/demonstrator/demonstratorDruckluftversorgungUnterbrochen/">
+        <owl:imports rdf:resource="http://www.appsist.de/ontology/demonstrator/"/>
+        <rdfs:label xml:lang="de">Ergänzungen der APPsist Demonstrator Ontologie: Druckluftversorgung unterbrochen</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.3</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Massnahme"/>
+        <terms:description xml:lang="de">Assistenzprozess zur Fehlerbehebung wenn die Druckluftversorgung unterbrochen ist</terms:description>
+        <ontology:hatAktivitaet rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/ea7020f6-4342-4bdf-88a9-dfa878a0cfbc"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_15"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_24"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_57"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_64"/>
+        <rdfs:label xml:lang="de">Druckluftsystem unterbrochen</rdfs:label>
+    </owl:NamedIndividual>
+    
+ 
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_13">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Experten benachrichtigen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_15">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Sicherheitsanweisung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_22">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Druckluftversorgung der Station prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_24">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Experten benachrichtigen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_28">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Experten benachrichtigen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_3 -->
+
+    <rdf:Description rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_3">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Deckelmagazin prüfen</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_30">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Hauptabsperrhahn überprüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_34">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Hauptabsperrhahn öffnen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_36">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Teilabsperrhahn überprüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_43">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Teilabsperrhahn öffnen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_46">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Experten benachrichtigen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_57 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_57">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Prozessdurchlauf starten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_58 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_58">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Deckelmagazin auffüllen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_64">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Prozessdurchlauf kontrollieren</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_9">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/ElementarerSchritt"/>
+        <rdfs:label xml:lang="de">Schubzylinder prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/ea7020f6-4342-4bdf-88a9-dfa878a0cfbc -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/ea7020f6-4342-4bdf-88a9-dfa878a0cfbc">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <terms:description xml:lang="de">Unterprozess zur Überprüfung der Roboterzelle</terms:description>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_13"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_3"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_58"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_9"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/0ab90959-3081-4591-bc8a-c15bb3bedc9c"/>
+        <rdfs:label xml:lang="de">Roboterzelle prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/0ab90959-3081-4591-bc8a-c15bb3bedc9c -->
+
+    <owl:NamedIndividual rdf:about="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/0ab90959-3081-4591-bc8a-c15bb3bedc9c">
+        <rdf:type rdf:resource="http://www.appsist.de/ontology/Aktivitaet"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_22"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_28"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_30"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_34"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_36"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_43"/>
+        <ontology:hatSchritt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_46"/>
+        <rdfs:label xml:lang="de">Druckluftsystem prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.appsist.de/ontology/demonstrator/DeckelmagazinLeer">
+        <ontology:bedingt rdf:resource="http://www.appsist.de/ontology/demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8"/>
+    </rdf:Description>
+
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/94865077-1ce3-44db-8dc4-f0a98e381415">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/ea7020f6-4342-4bdf-88a9-dfa878a0cfbc" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/97747d78-f284-4844-aadb-343fc2cef9d2">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/0ab90959-3081-4591-bc8a-c15bb3bedc9c" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/c585561e-1f6e-4483-8676-c3bd798135df">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_15" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/24c88a41-7d4e-4ba1-a7a6-591a943daadb">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_57" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/0239e825-dcc3-4601-bf1c-913d09dcb63b">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html+snippet</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_64" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/b2911b48-95b9-4352-bd3d-a72ef0c78080">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_24" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/f57cf40b-0280-4bc3-9556-93d719452e9a">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_22" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/2774628a-dc0d-4d7e-938b-2f3f99159f49">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_28" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/56725515-aa8b-46e5-9e57-b73b01098e24">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_30" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/19f55df9-8f34-4705-832c-5607df54c4ec">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_34" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/84658b9e-3a3c-4368-aef6-030bfa99e6cc">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_36" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/38cb72ee-1a8e-46bc-86c1-09a9b63f2701">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_43" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/e08a94e8-d028-45a1-8e92-7766f412df11">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_46" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/9f75737f-254d-426f-b3c3-b1a761fcf412">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_3" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/2eef6edd-3565-4938-b1df-8a85be887e15">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_58" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/c0e98bd9-f8ae-4821-8bed-e8a74c64a89c">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>text/html</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_9" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&ontology;demonstrator/0bb59007-4ff6-45f3-884b-31bd14df026b">
+    <rdf:type rdf:resource="&ontology;Instruktion" />
+    <ontology:format>image/png</ontology:format>
+    <ontology:informiertUeber rdf:resource="&ontology;demonstrator/efefd3bb-5d78-4106-ad82-d50d1f22a1c8/_13" />
+  </owl:NamedIndividual>
+
+  </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
